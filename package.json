@@ -27,7 +27,10 @@
     "reflect-metadata": "^0.1.12",
     "rxjs": "^6.0.0 || ^7.0.0"
   },
-  "dependencies": {},
+  "dependencies": {
+    "argon2": "^0.28.3",
+    "bcrypt": "^5.0.1"
+  },
   "devDependencies": {
     "@commitlint/cli": "15.0.0",
     "@commitlint/config-angular": "15.0.0",
