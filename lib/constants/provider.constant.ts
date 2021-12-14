@@ -1,0 +1,1 @@
+export const HASHER_CONFIG = 'HASHER_CONFIG';
