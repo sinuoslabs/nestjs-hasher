@@ -1,21 +1,25 @@
 import { ModuleMetadata, Provider, Type } from '@nestjs/common';
 
+/** @type HasherProviderType */
 export type HasherProviderType = 'bcrypt' | 'argon';
 
-export interface IHasherBcrypt {
-  provider: 'bcrypt' | HasherProviderType;
-  round: number;
-}
-
-export interface IHasherArgon {
-  provider: 'argon' | HasherProviderType;
-  algo: string;
-}
-
+/**
+ * @interface HasherModuleOptionsFactory
+ * @property createHasherOptions()
+ */
 export interface HasherModuleOptionsFactory {
   createHasherOptions(): Promise<HasherModuleOptions> | HasherModuleOptions;
 }
 
+/**
+ * @interface HasherModuleAsyncOptions
+ * @extends {Pick<ModuleMetadata, 'imports'>}
+ * @property useExisting
+ * @property useClass
+ * @property useFactory
+ * @property inject
+ * @property extraProviders
+ */
 export interface HasherModuleAsyncOptions
   extends Pick<ModuleMetadata, 'imports'> {
   useExisting?: Type<HasherModuleOptionsFactory>;
@@ -27,4 +31,12 @@ export interface HasherModuleAsyncOptions
   extraProviders?: Provider[];
 }
 
-export interface HasherModuleOptions extends IHasherBcrypt, IHasherArgon {}
+/**
+ * @interface HasherModuleOptions
+ * @property {HasherProviderType} provider
+ * @property {number} round
+ */
+export interface HasherModuleOptions {
+  provider: HasherProviderType;
+  round?: number;
+}

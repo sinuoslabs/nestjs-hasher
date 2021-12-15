@@ -1,4 +1,6 @@
 import { IHasherService } from '../interfaces';
+import { NestjsHasherException } from '../exceptions';
+import * as argon2 from 'argon2';
 
 /**
  * Argon service
@@ -7,12 +9,6 @@ import { IHasherService } from '../interfaces';
  */
 export class ArgonService implements IHasherService {
   /**
-   * @constructor
-   * @param {string} algorithm
-   */
-  constructor(private readonly algorithm: string) {}
-
-  /**
    * Compare method to compare encrypted text and simple text
    * @method
    * @Type [Function}
@@ -20,8 +16,12 @@ export class ArgonService implements IHasherService {
    * @param {string} encryptedText
    * @return Promise<boolean>
    */
-  async compare(plainText: string, encryptedText: string): Promise<boolean> {
-    return Promise.resolve(false);
+  async check(plainText: string, encryptedText: string): Promise<boolean> {
+    try {
+      return argon2.verify(encryptedText, plainText);
+    } catch (e) {
+      throw new NestjsHasherException(e.message);
+    }
   }
 
   /**
@@ -32,6 +32,10 @@ export class ArgonService implements IHasherService {
    * @return Promise<string> - Encrypted value promise
    */
   async hash(plainText: string): Promise<string> {
-    return Promise.resolve('');
+    try {
+      return argon2.hash(plainText);
+    } catch (e) {
+      throw new NestjsHasherException(e.message);
+    }
   }
 }

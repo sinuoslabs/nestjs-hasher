@@ -1,7 +1,8 @@
 import { Inject, Injectable } from '@nestjs/common';
-import { HasherManagerService } from './hasher-manager.service';
+import { HasherManagerService } from './managers';
 import { ArgonService, BcryptService } from './providers';
 import { HasherModuleOptions } from './interfaces';
+import { HASHER_CONFIG } from './constants';
 
 @Injectable()
 export class NestjsHasherService extends HasherManagerService {
@@ -10,7 +11,9 @@ export class NestjsHasherService extends HasherManagerService {
    * @constructor
    * @param {HasherModuleOptions} hasherOption
    */
-  constructor(@Inject() private hasherOption: HasherModuleOptions) {
+  constructor(
+    @Inject(HASHER_CONFIG) private hasherOption: HasherModuleOptions,
+  ) {
     super();
   }
 
@@ -29,7 +32,7 @@ export class NestjsHasherService extends HasherManagerService {
    * @protected
    */
   protected createArgonProvider() {
-    return new ArgonService(this.hasherOption.algo);
+    return new ArgonService();
   }
 
   /**
@@ -38,6 +41,10 @@ export class NestjsHasherService extends HasherManagerService {
    * @protected
    */
   protected createBcryptProvider() {
+    if (!this.hasherOption.round) {
+      throw new Error(`To use bcrypt salt round is required`);
+    }
+
     return new BcryptService(Number(this.hasherOption.round));
   }
 
@@ -49,8 +56,8 @@ export class NestjsHasherService extends HasherManagerService {
    * @param {string} encryptedText
    * @return Promise<boolean>
    */
-  async compare(plainText: string, encryptedText: string): Promise<boolean> {
-    return this.provider().compare(plainText, encryptedText);
+  async check(plainText: string, encryptedText: string): Promise<boolean> {
+    return this.provider().check(plainText, encryptedText);
   }
 
   /**

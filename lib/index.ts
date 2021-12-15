@@ -1,2 +1,2 @@
 export * from './nestjs-hasher.module';
-export * from './hasher-manager.service';
+export * from './nestjs-hasher.service';

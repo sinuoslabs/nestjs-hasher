@@ -1,4 +1,4 @@
-import { IHasherService } from './interfaces';
+import { IHasherService } from '../interfaces';
 
 /**
  * Hasher manager
@@ -18,7 +18,7 @@ export abstract class HasherManagerService implements IHasherService {
    * @property {array} customCreators
    * @var array
    */
-  protected customCreator: Array<Function> = [];
+  protected customCreator = [];
 
   /**
    * Get the default provider name.
@@ -45,7 +45,7 @@ export abstract class HasherManagerService implements IHasherService {
    * @param {string} encryptedText
    * @return Promise<boolean>
    */
-  abstract compare(plainText: string, encryptedText: string): Promise<boolean>;
+  abstract check(plainText: string, encryptedText: string): Promise<boolean>;
 
   /**
    * Get a provider instance.

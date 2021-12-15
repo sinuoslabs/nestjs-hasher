@@ -1,4 +1,6 @@
 import { IHasherService } from '../interfaces';
+import { NestjsHasherException } from '../exceptions';
+import * as bcrypt from 'bcrypt';
 
 /**
  * Bcrypt service.
@@ -20,8 +22,12 @@ export class BcryptService implements IHasherService {
    * @param {string} encryptedText
    * @return Promise<boolean>
    */
-  async compare(plainText: string, encryptedText: string): Promise<boolean> {
-    return Promise.resolve(false);
+  async check(plainText: string, encryptedText: string): Promise<boolean> {
+    try {
+      return bcrypt.compare(plainText, encryptedText);
+    } catch (e) {
+      throw new NestjsHasherException(e.message);
+    }
   }
 
   /**
@@ -32,6 +38,10 @@ export class BcryptService implements IHasherService {
    * @return Promise<string> - Encrypted value promise
    */
   async hash(plainText: string): Promise<string> {
-    return Promise.resolve('');
+    try {
+      return bcrypt.hash(plainText, this.bcryptRound);
+    } catch (e) {
+      throw new NestjsHasherException(e.message);
+    }
   }
 }
