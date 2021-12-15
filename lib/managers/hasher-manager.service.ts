@@ -49,10 +49,11 @@ export abstract class HasherManagerService implements IHasherService {
 
   /**
    * Get a provider instance.
+   * @private
    * @param {string} provider
    * @return function
    */
-  public provider(provider?: string): any {
+  protected provider(provider?: string): any {
     const defaultProvider = provider ?? this.getDefaultProvider();
 
     if (!defaultProvider) {
@@ -68,11 +69,12 @@ export abstract class HasherManagerService implements IHasherService {
 
   /**
    * Create a new provider instance.
+   * @private
    * @param {string} provider
    * @return function
    * @throws Error
    */
-  protected createProvider(provider: string) {
+  private createProvider(provider: string) {
     if (this.customCreator[provider]) {
       return this.callCustomCreator(provider);
     } else {
@@ -91,10 +93,11 @@ export abstract class HasherManagerService implements IHasherService {
 
   /**
    * Call a custom provider creator.
+   * @private
    * @param {string} provider
    * @return function
    */
-  protected callCustomCreator(provider: string) {
+  private callCustomCreator(provider: string) {
     return this.customCreator[provider]();
   }
 }
