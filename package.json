@@ -77,13 +77,13 @@
     "email": "dao.houssene@gmail.com",
     "url": "https://twitter.com/houssenedao"
   },
-  "homepage": "https://github.com/sinuos-lab/nestjs-hasher#readme",
+  "homepage": "https://github.com/sinuoslabs/nestjs-hasher#readme",
   "bugs": {
-    "url": "https://github.com/sinuos-lab/nestjs-hasher/issues"
+    "url": "https://github.com/sinuoslabs/nestjs-hasher/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/sinuos-lab/nestjs-hasher"
+    "url": "https://github.com/sinuoslabs/nestjs-hasher"
   },
   "jest": {
     "moduleFileExtensions": [
