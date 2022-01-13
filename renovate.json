@@ -1,9 +1,5 @@
 {
   "semanticCommits": true,
-  "patch": {
-    "appendLabels": ["automerge"],
-    "automerge": true
-  },
   "packageRules": [{
     "depTypeList": ["devDependencies"],
     "automerge": true,
