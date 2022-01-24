@@ -3,7 +3,6 @@
   "semanticCommits": true,
   "ignoreTests": true,
   "assignAutomerge": true,
-  "automerge": true,
   "automergeType": "pr",
   "npm": {
     "stabilityDays": 3
