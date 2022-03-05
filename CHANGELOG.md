@@ -1,5 +1,39 @@
 # Changelog
 
+## [v1.0.6](https://github.com/sinuoslabs/nestjs-hasher/tree/v1.0.6) (2022-03-05)
+
+[Full Changelog](https://github.com/sinuoslabs/nestjs-hasher/compare/v1.0.5...v1.0.6)
+
+**Merged pull requests:**
+
+- chore\(deps\): update dependency lint-staged to v12.3.5 [\#93](https://github.com/sinuoslabs/nestjs-hasher/pull/93) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update dependency eslint-config-prettier to v8.5.0 [\#92](https://github.com/sinuoslabs/nestjs-hasher/pull/92) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update actions/checkout action to v3 [\#91](https://github.com/sinuoslabs/nestjs-hasher/pull/91) ([renovate[bot]](https://github.com/apps/renovate))
+- fix\(deps\): update dependency argon2 to v0.28.5 [\#90](https://github.com/sinuoslabs/nestjs-hasher/pull/90) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update dev dependancies to v8.4.0 [\#89](https://github.com/sinuoslabs/nestjs-hasher/pull/89) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update dependency typescript to v4.6.2 [\#88](https://github.com/sinuoslabs/nestjs-hasher/pull/88) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update dev dependancies to v5.13.0 [\#87](https://github.com/sinuoslabs/nestjs-hasher/pull/87) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update dependency eslint to v8.10.0 [\#86](https://github.com/sinuoslabs/nestjs-hasher/pull/86) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update actions/setup-node action to v3 [\#85](https://github.com/sinuoslabs/nestjs-hasher/pull/85) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update dependency @types/node to v16.11.26 [\#84](https://github.com/sinuoslabs/nestjs-hasher/pull/84) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update dependency @types/jest to v27.4.1 [\#83](https://github.com/sinuoslabs/nestjs-hasher/pull/83) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update dev dependancies to v5.12.1 [\#82](https://github.com/sinuoslabs/nestjs-hasher/pull/82) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update dependency eslint-config-prettier to v8.4.0 [\#81](https://github.com/sinuoslabs/nestjs-hasher/pull/81) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update dev dependancies to v8.3.1 [\#80](https://github.com/sinuoslabs/nestjs-hasher/pull/80) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update dependency @types/node to v16.11.25 [\#79](https://github.com/sinuoslabs/nestjs-hasher/pull/79) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update dev dependancies to v5.12.0 [\#78](https://github.com/sinuoslabs/nestjs-hasher/pull/78) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update dev dependancies to v8.3.0 [\#77](https://github.com/sinuoslabs/nestjs-hasher/pull/77) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update dependency lint-staged to v12.3.4 [\#76](https://github.com/sinuoslabs/nestjs-hasher/pull/76) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update dev dependancies to v16.2.1 [\#75](https://github.com/sinuoslabs/nestjs-hasher/pull/75) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update dependency eslint to v8.9.0 [\#74](https://github.com/sinuoslabs/nestjs-hasher/pull/74) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update dependency @types/node to v16.11.24 [\#73](https://github.com/sinuoslabs/nestjs-hasher/pull/73) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update dependency @types/node to v16.11.23 [\#72](https://github.com/sinuoslabs/nestjs-hasher/pull/72) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update dependency rxjs to v7.5.4 [\#71](https://github.com/sinuoslabs/nestjs-hasher/pull/71) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update dependency rxjs to v7.5.3 [\#70](https://github.com/sinuoslabs/nestjs-hasher/pull/70) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update dependency jest to v27.5.1 [\#69](https://github.com/sinuoslabs/nestjs-hasher/pull/69) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update dev dependancies to v5.11.0 [\#67](https://github.com/sinuoslabs/nestjs-hasher/pull/67) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update dependency jest to v27.5.0 [\#66](https://github.com/sinuoslabs/nestjs-hasher/pull/66) ([renovate[bot]](https://github.com/apps/renovate))
+
 ## [v1.0.5](https://github.com/sinuoslabs/nestjs-hasher/tree/v1.0.5) (2022-02-04)
 
 [Full Changelog](https://github.com/sinuoslabs/nestjs-hasher/compare/v1.0.4...v1.0.5)
