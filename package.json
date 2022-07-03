@@ -38,7 +38,7 @@
     "rxjs": "^6.0.0 || ^7.0.0"
   },
   "dependencies": {
-    "argon2": "0.28.5",
+    "argon2": "0.28.7",
     "bcrypt": "5.0.1"
   },
   "devDependencies": {
