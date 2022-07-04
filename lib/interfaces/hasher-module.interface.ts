@@ -8,7 +8,10 @@ export type HasherProviderType = 'bcrypt' | 'argon';
  * @property createHasherOptions()
  */
 export interface HasherModuleOptionsFactory {
-  createHasherOptions(): Promise<HasherModuleOptions> | HasherModuleOptions;
+  createHasherOptions():
+    | Promise<HasherBcryptModuleOptions | HasherArgonModuleOptions>
+    | HasherBcryptModuleOptions
+    | HasherArgonModuleOptions;
 }
 
 /**
@@ -26,17 +29,29 @@ export interface HasherModuleAsyncOptions
   useClass?: Type<HasherModuleOptionsFactory>;
   useFactory?: (
     ...args: any[]
-  ) => Promise<HasherModuleOptions> | HasherModuleOptions;
+  ) =>
+    | Promise<HasherBcryptModuleOptions | HasherArgonModuleOptions>
+    | HasherBcryptModuleOptions
+    | HasherArgonModuleOptions;
   inject?: any[];
   extraProviders?: Provider[];
 }
 
 /**
- * @interface HasherModuleOptions
+ * @interface HasherBcryptModuleOptions
  * @property {HasherProviderType} provider
  * @property {number} round
  */
-export interface HasherModuleOptions {
-  provider: HasherProviderType;
-  round?: number;
+export interface HasherBcryptModuleOptions {
+  provider: 'bcrypt';
+  round: number;
+}
+
+/**
+ * @interface HasherArgonModuleOptions
+ * @property {HasherProviderType} provider
+ * @property {number} round
+ */
+export interface HasherArgonModuleOptions {
+  provider: 'argon';
 }
