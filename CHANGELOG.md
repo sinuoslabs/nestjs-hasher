@@ -1,5 +1,14 @@
 # Changelog
 
+## [v1.1.1](https://github.com/sinuoslabs/nestjs-hasher/tree/v1.1.1) (2022-07-04)
+
+[Full Changelog](https://github.com/sinuoslabs/nestjs-hasher/compare/v1.1.0...v1.1.1)
+
+**Merged pull requests:**
+
+- chore\(deps\): update dev dependancies to v5.30.5 [\#204](https://github.com/sinuoslabs/nestjs-hasher/pull/204) ([renovate[bot]](https://github.com/apps/renovate))
+- fix\(deps\): update dependency argon2 to v0.28.7 [\#202](https://github.com/sinuoslabs/nestjs-hasher/pull/202) ([renovate[bot]](https://github.com/apps/renovate))
+
 ## [v1.1.0](https://github.com/sinuoslabs/nestjs-hasher/tree/v1.1.0) (2022-07-04)
 
 [Full Changelog](https://github.com/sinuoslabs/nestjs-hasher/compare/v1.0.6...v1.1.0)
