@@ -2,8 +2,9 @@ import { DynamicModule, Module, Provider, ValueProvider } from '@nestjs/common';
 import { NestjsHasherService } from './nestjs-hasher.service';
 import { HASHER_CONFIG } from './constants';
 import {
+  HasherArgonModuleOptions,
+  HasherBcryptModuleOptions,
   HasherModuleAsyncOptions,
-  HasherModuleOptions,
   HasherModuleOptionsFactory,
 } from './interfaces';
 
@@ -12,10 +13,12 @@ export class NestjsHasherModule {
   /**
    * Register module
    * @static
-   * @param {HasherModuleOptions} options
+   * @param {HasherBcryptModuleOptions | HasherArgonModuleOptions} options
    * @return DynamicModule
    */
-  static register(options: HasherModuleOptions): DynamicModule {
+  static register(
+    options: HasherBcryptModuleOptions | HasherArgonModuleOptions,
+  ): DynamicModule {
     const hasherProvider: ValueProvider = {
       provide: HASHER_CONFIG,
       useValue: options,
@@ -107,7 +110,7 @@ export class NestjsHasherModule {
       provide: HASHER_CONFIG,
       async useFactory(
         optionsFactory: HasherModuleOptionsFactory,
-      ): Promise<HasherModuleOptions> {
+      ): Promise<HasherBcryptModuleOptions | HasherArgonModuleOptions> {
         return optionsFactory.createHasherOptions();
       },
       inject: [inject],

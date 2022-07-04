@@ -1,7 +1,11 @@
 import { Inject, Injectable } from '@nestjs/common';
 import { HasherManagerService } from './managers';
 import { ArgonService, BcryptService } from './providers';
-import { HasherModuleOptions } from './interfaces';
+import {
+  HasherArgonModuleOptions,
+  HasherBcryptModuleOptions,
+  HasherProviderType,
+} from './interfaces';
 import { HASHER_CONFIG } from './constants';
 
 @Injectable()
@@ -9,12 +13,20 @@ export class NestjsHasherService extends HasherManagerService {
   /**
    * Nestjs hasher service constructor.
    * @constructor
-   * @param {HasherModuleOptions} hasherOption
+   * @param {HasherBcryptModuleOptions} options
    */
   constructor(
-    @Inject(HASHER_CONFIG) private hasherOption: HasherModuleOptions,
+    @Inject(HASHER_CONFIG)
+    private options: HasherBcryptModuleOptions | HasherArgonModuleOptions,
   ) {
     super();
+
+    if (
+      this.options.provider !== 'argon' &&
+      this.options.provider !== 'bcrypt'
+    ) {
+      throw new Error(`Config error your provider not exist`);
+    }
   }
 
   /**
@@ -22,8 +34,8 @@ export class NestjsHasherService extends HasherManagerService {
    * @method
    * @protected
    */
-  protected getDefaultProvider(): string {
-    return this.hasherOption.provider;
+  protected getDefaultProvider(): HasherProviderType {
+    return this.options.provider;
   }
 
   /**
@@ -41,11 +53,16 @@ export class NestjsHasherService extends HasherManagerService {
    * @protected
    */
   protected createBcryptProvider() {
-    if (!this.hasherOption.round) {
-      throw new Error(`To use bcrypt salt round is required`);
-    }
+    if (this.options.provider === 'bcrypt') {
+      // defined option type
+      this.options = this.options as HasherBcryptModuleOptions;
 
-    return new BcryptService(Number(this.hasherOption.round));
+      if (!this.options.round) {
+        throw new Error(`To use bcrypt salt round is required`);
+      }
+
+      return new BcryptService(Number(this.options?.round));
+    }
   }
 
   /**
