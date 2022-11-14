@@ -1,5 +1,18 @@
 # Changelog
 
+## [v1.1.3](https://github.com/sinuoslabs/nestjs-hasher/tree/v1.1.3) (2022-11-14)
+
+[Full Changelog](https://github.com/sinuoslabs/nestjs-hasher/compare/v1.1.2...v1.1.3)
+
+**Merged pull requests:**
+
+- chore\(deps\): update dependency jest to v29.3.1 [\#323](https://github.com/sinuoslabs/nestjs-hasher/pull/323) ([renovate[bot]](https://github.com/apps/renovate))
+- fix\(deps\): update dependency argon2 to v0.30.2 [\#322](https://github.com/sinuoslabs/nestjs-hasher/pull/322) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update dependency husky to v8.0.2 [\#321](https://github.com/sinuoslabs/nestjs-hasher/pull/321) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update dev dependancies [\#320](https://github.com/sinuoslabs/nestjs-hasher/pull/320) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update dev dependancies to v9.2.0 [\#319](https://github.com/sinuoslabs/nestjs-hasher/pull/319) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update dependency eslint to v8.27.0 [\#318](https://github.com/sinuoslabs/nestjs-hasher/pull/318) ([renovate[bot]](https://github.com/apps/renovate))
+
 ## [v1.1.2](https://github.com/sinuoslabs/nestjs-hasher/tree/v1.1.2) (2022-11-08)
 
 [Full Changelog](https://github.com/sinuoslabs/nestjs-hasher/compare/v1.1.1...v1.1.2)
