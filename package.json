@@ -65,7 +65,7 @@
     "reflect-metadata": "0.1.13",
     "rimraf": "5.0.1",
     "rxjs": "7.8.1",
-    "semantic-release": "21.0.8",
+    "semantic-release": "21.0.9",
     "ts-jest": "29.1.1",
     "typescript": "5.1.6"
   },
