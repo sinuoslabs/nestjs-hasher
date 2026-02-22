@@ -42,8 +42,8 @@
     "bcrypt": "5.1.1"
   },
   "devDependencies": {
-    "@commitlint/cli": "20.4.1",
-    "@commitlint/config-angular": "20.4.1",
+    "@commitlint/cli": "20.4.2",
+    "@commitlint/config-angular": "20.4.2",
     "@nestjs/common": "11.1.14",
     "@nestjs/core": "11.1.14",
     "@nestjs/platform-express": "11.1.14",
