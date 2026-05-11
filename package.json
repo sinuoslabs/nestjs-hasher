@@ -42,8 +42,8 @@
     "bcrypt": "5.1.1"
   },
   "devDependencies": {
-    "@commitlint/cli": "20.5.3",
-    "@commitlint/config-angular": "20.5.3",
+    "@commitlint/cli": "21.0.0",
+    "@commitlint/config-angular": "21.0.0",
     "@nestjs/common": "11.1.19",
     "@nestjs/core": "11.1.19",
     "@nestjs/platform-express": "11.1.19",
@@ -59,7 +59,7 @@
     "eslint-plugin-prettier": "5.5.5",
     "husky": "9.1.7",
     "jest": "30.4.1",
-    "lint-staged": "17.0.2",
+    "lint-staged": "17.0.3",
     "prettier": "3.8.3",
     "pretty-quick": "4.2.2",
     "reflect-metadata": "0.2.2",
